@@ -104,9 +104,9 @@ export class HandTracker {
         // ジェスチャー判定
         if (indexExtended && this.isOnlyIndexExtended(landmarks)) {
             return 'rotate';
-        } else if (angle < -30) {
+        } else if (angle < -70) {
             return 'right'; // 画面上では左右反転
-        } else if (angle > 30) {
+        } else if (angle > 70) {
             return 'left';  // 画面上では左右反転
         } else if (wrist.y < middleBase.y - 0.1) {
             return 'down';
